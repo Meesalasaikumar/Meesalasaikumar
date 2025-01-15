@@ -1,0 +1,144 @@
+<! DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Prediction</title>
+        
+    <nav class="navigate">
+          <ul>   
+            <li style="float:left"><a href="{{ url_for('graph') }}"><b><font size="3">PERFORMANCE</font></b></a>
+            </li>
+          </ul>
+    </nav>
+        <br>
+        <br><br><br><br><br>
+
+  </head>
+    
+    
+<style>
+
+.bg-text {
+    padding-left:65.5em;
+}
+
+body{
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    
+    background-image: url("/static/face.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2{
+    
+    font-family: 'Helvetica';
+    color:white;
+}
+
+h3{
+    font-size:18px;
+    font-family: 'Helvetica';
+    color:white;
+}
+}
+
+
+.results{
+    padding-left:6.8em;
+    font-size:1.5em;
+}
+
+.para{
+    text-align:center;
+    font-family: 'Helvetica';
+    color:white;
+    padding: 0.3em;
+}
+
+.navigate{ 
+    top: 0.3em;  
+    height: 1.5em;  
+    display: flex;   
+}
+
+a:hover {
+    color: white;
+    background-color: blue;
+    text-decoration: underline;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 0.8em 1em;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.score {
+  width: 7em;
+  padding: 1em;
+  border: 0.2em solid #3fb09b;
+  margin: 0;
+}
+.mirror{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 0.1em solid #3fb09b;
+}
+</style>
+</head>
+
+<body>
+        
+                       <!-- Website Title -->
+
+<div class="bg-text">
+<h2><b><u>Feature Mapping</u></b></h2>
+<br>
+
+			<!-- Result -->
+			
+			
+			<div class="mirror">
+			<img src="{{img}}" width="545" height="300">
+			</div>
+			
+			<div class="results">
+				<p style="color:black;"><b>{{result}}</b></p>
+			</div>
+			<br><br>
+			<div>
+    			<h3><u>Matching Score</u></h3>
+    			<p class="score"><b>{{score}}</u></b></p>
+			</div>
+</div>
+
+</body>
+</html>

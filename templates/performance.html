@@ -1,0 +1,100 @@
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Performance</title>
+        <nav class="navigate">
+          <ul>   
+            <li><a href="/"><b><font size="3">HOME</font></b></a>
+            </li>
+          </ul>
+    </nav>
+   </head>
+   
+
+<style>
+
+body { 
+    background-image: url("/static/performance.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:#e7e7e7;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+
+}
+.navigate{ 
+    top: 0.3em;  
+    height: 1.5em;  
+    display: flex;   
+    padding-bottom:2%;   
+}
+
+
+a:hover {
+    color: white;
+    background-color: blue;
+    text-decoration: underline;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 0.8em 1em;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+
+
+img{ 
+    box-shadow:0 0.2em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.3em 1.2em 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    color:white;
+
+}
+.image-width{
+    width:31em;
+    height:27.6em;
+}
+</style>
+<body>
+    
+
+<h3><center> Confusion Matrix </h3>
+<img class="image-width" src="{{ url_for('static', filename='confusion_matrix.png') }}" alt="confusion_matrix">
+<br>
+</div>
+<br>
+
+
+</body>   
+</Html>  
